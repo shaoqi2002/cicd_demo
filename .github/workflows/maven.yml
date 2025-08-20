@@ -40,7 +40,7 @@ snyk:
   steps: 
     - uses: actions/checkout@master 
     - name: Run Snyk to check for vulnerabilities 
-    uses: snyk/actions/maven@master 
-    continue-on-error: true # To make sure that SARIF upload gets called 
-    env: 
-    SNYK_TOKEN: ${{ 734db5f1-9218-4b56-99ba-91e40f60e54a }} 
+      uses: snyk/actions/maven@master 
+      continue-on-error: true # To make sure that SARIF upload gets called 
+      env: 
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }} 
